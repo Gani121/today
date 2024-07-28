@@ -7,7 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  * Hello world!
@@ -32,7 +32,10 @@ public class App
        // Webdriver driver = new Chromedriver();
         
         
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver ;
+        ChromeOptions options=new ChromeOptions();
+        options.addArguments("headless");
+        driver=new ChromeDriver(options);
 
         driver.get("https://www.google.com/"); 
         
